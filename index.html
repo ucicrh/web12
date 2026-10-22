@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="zh-TW">
 
 <head>
     <meta charset="UTF-8">
@@ -13,17 +13,22 @@
             font-family: '標楷體';
         }
 
+        div {
+            /* border: 1px solid black; */
+            box-shadow: 0 0 1px rgba(170, 170, 170, 0.4);
+        }
+
         .main {
             width: 1024px;
             height: 768px;
-            margin: auto;
-            background-color: aquamarine;
+            /* margin: auto; */
+            /* background-color: aquamarine; */
         }
 
         .header {
             width: 1000px;
             height: 65px;
-            margin: auto;
+            /* margin: auto; */
             /* background-color: aqua; */
         }
 
@@ -32,15 +37,15 @@
             width: 215px;
             height: calc(768px - 65px - 20px);
             margin-left: 12px;
-            background-color: blue;
+            /* background-color: blue; */
         }
 
         .nav-menu {
-            box-sizing: border-box;
+            /* box-sizing: border-box; */
             width: 215px;
             height: calc(768px - 65px - 20px - 25px);
             /* background-color: lightcoral; */
-            font-family: '標楷體';
+            /* font-family: '標楷體'; */
         }
 
         .nav-menu p {
@@ -55,7 +60,7 @@
             width: 215px;
             height: 40px;
             text-align: center;
-            font-family: '標楷體';
+            /* font-family: '標楷體'; */
             font-size: 16px;
             color: #000;
             background: url(./images/menu1.png) no-repeat center;
@@ -65,34 +70,37 @@
             background: url(./images/menu2.png) no-repeat center;
         }
 
+        .nav-menu td a {
+            display: block;
+            width: 100%;
+            height: 100%;
+            line-height: 40px;
+        }
+
         .update {
             width: 215px;
             height: 25px;
-            background-color: lightgreen;
+            /* background-color: lightgreen; */
             text-align: center;
-            font-family: '標楷體';
+            /* font-family: '標楷體'; */
             font-size: 16px;
+            line-height: 25px;
             color: #000;
         }
 
-        /* )1.顯示的文字內容為「最近更新日期：yyyy/mm/dd」。
-【說明：yyyy/mm/dd 為應檢日期；其中 yyyy：西元年，mm：月份，dd：日期】
-(＊)2.文字字型為標楷體。
-(＊)3.文字顏色為#000000，水平置中對齊。
-(＊)4.文字的字型大小 16px (medium、size=3)。 */
         .right {
             float: right;
             width: 770px;
             height: calc(768px - 65px - 20px);
             margin-right: 12px;
-            background-color: lightcoral;
+            /* background-color: lightcoral; */
         }
 
         marquee {
             width: 770px;
             height: 29px;
             vertical-align: middle;
-            font-family: '標楷體';
+            /* font-family: '標楷體'; */
             font-size: 24px;
             color: #00f;
             /* background-color: antiquewhite; */
@@ -101,29 +109,40 @@
         .content {
             width: 770px;
             height: calc(768px - 65px - 29px - 20px);
-            background-color: lightgreen;
+            /* background-color: lightgreen; */
+        }
+
+        .content iframe {
+            width: 100%;
+            height: 100%;
+            border: 0;
         }
 
         .footer {
             width: 1000px;
             height: 20px;
-            margin: 0 auto;
+            /* margin: auto; */
             clear: both;
-            background-color: black;
+            font-size: 16px;
+            text-align: center;
+            color: #000;
+            /* background-color: black; */
         }
     </style>
 </head>
 
 <body>
     <div class="main">
-        <div class="header"><a href="./index.html"><img src="./images/logo.png" alt="國立科技高中校園社團介紹網"
-                    title="國立科技高中校園社團介紹網"></a></div>
+        <div class="header">
+            <a href="./index.html"><img src="./images/logo.png" alt="國立科技高中校園社團介紹網" title="國立科技高中校園社團介紹網">
+            </a>
+        </div>
         <div class="left">
             <div class="nav-menu">
                 <p>社團介紹</p>
                 <table>
                     <tr>
-                        <td><a href="./guitar_history.html">吉他社</a></td>
+                        <td><a href="./guitar_history.html" target="iframe">吉他社</a></td>
                     </tr>
                     <tr>
                         <td>熱舞社</td>
@@ -142,13 +161,15 @@
                     </tr>
                 </table>
             </div>
-            <div class="update">最近更新日期：2006/10/21</div>
+            <div class="update">最近更新日期：2006/10/22</div>
         </div>
         <div class="right">
             <marquee behavior="" direction="">歡迎光臨校園社團介紹網，參觀後請支持社團活動並熱烈參與</marquee>
-            <div class="content"></div>
+            <div class="content">
+                <iframe src="./main.html" name="iframe"></iframe>
+            </div>
         </div>
-        <div class="footer"></div>
+        <div class="footer">網頁設計及維護：18張聖威</div>
     </div>
 </body>
 
